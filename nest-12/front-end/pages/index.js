@@ -9,7 +9,6 @@ export default function Home() {
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState(null);
 
-  // Get request
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -26,7 +25,6 @@ export default function Home() {
     fetchPosts();
   }, []);
 
-  // Post request
   const handleCreatePost = async () => {
     try {
       await axios.post("http://localhost:4000/add_user", {
